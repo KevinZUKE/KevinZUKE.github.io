@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <style>
+        div{margin-bottom: 10px;}
+        div span{margin: 0 20px;}
+    </style>
+</head>
+<body>
+<div>成为微信好友<span id="once"></span>天</div>
+<div>第一次见面<span id="twice"></span>天</div>
+<script>
+    var today = new Date();
+    var day = Date.parse(today);
+    var day1 = Date.parse("2018/11/29");
+    var day2 = Date.parse("2018/12/1");
+    var dateSpan1 = day - day1;
+    var dateSpan2 = day - day2;
+    dateSpan1 = Math.abs(dateSpan1);
+    dateSpan2 = Math.abs(dateSpan2);
+    var iDays1 = Math.floor(dateSpan1 / (24 * 3600 * 1000));
+    var iDays2 = Math.floor(dateSpan2 / (24 * 3600 * 1000));
+    document.getElementById("once").innerText = iDays1;
+    document.getElementById("twice").innerText = iDays2;
+</script>
+</body>
+</html>
