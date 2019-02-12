@@ -12,19 +12,31 @@
 <body>
 <div>成为微信好友<span id="once"></span>天</div>
 <div>第一次见面<span id="twice"></span>天</div>
+<div>第一次牵手<span id="third"></span>天</div>
+<div>第一次轻吻<span id="fourth"></span>天</div>
 <script>
     var today = new Date();
     var day = Date.parse(today);
     var day1 = Date.parse("2018/11/29");
     var day2 = Date.parse("2018/12/1");
+    var day3 = Date.parse("2019/1/12");
+    var day4 = Date.parse("2019/2/6");
     var dateSpan1 = day - day1;
     var dateSpan2 = day - day2;
+    var dateSpan3 = day - day3;
+    var dateSpan4 = day - day4;
     dateSpan1 = Math.abs(dateSpan1);
     dateSpan2 = Math.abs(dateSpan2);
+    dateSpan3 = Math.abs(dateSpan3);
+    dateSpan4 = Math.abs(dateSpan4);
     var iDays1 = Math.floor(dateSpan1 / (24 * 3600 * 1000));
     var iDays2 = Math.floor(dateSpan2 / (24 * 3600 * 1000));
+    var iDays3 = Math.floor(dateSpan3 / (24 * 3600 * 1000));
+    var iDays4 = Math.floor(dateSpan4 / (24 * 3600 * 1000));
     document.getElementById("once").innerText = iDays1;
     document.getElementById("twice").innerText = iDays2;
+    document.getElementById("third").innerText = iDays3;
+    document.getElementById("fourth").innerText = iDays4;
 </script>
 </body>
 </html>
